@@ -1,0 +1,9 @@
+.projectPage {
+
+}
+
+.thumbnail {
+    width: 150px; /* Set a fixed height for the thumbnails */
+    object-fit: cover; /* Ensure the image covers the entire area */
+  }
+  

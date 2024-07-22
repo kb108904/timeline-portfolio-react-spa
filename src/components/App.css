@@ -1,0 +1,12 @@
+main {
+  height: 100vh;
+  height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* min-width: 1000px; */
+}
+
+main h1 {
+  text-align: center;
+}

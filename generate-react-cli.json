@@ -1,0 +1,44 @@
+{
+  "usesTypeScript": true,
+  "usesStyledComponents": false,
+  "cssPreprocessor": "scss",
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "customTemplates": {
+        "component": "templates/components/TemplateName.tsx",
+        "style": "templates/components/_TemplateName.scss"
+      },
+      "path": "src/components",
+      "withStyle": false,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": true
+    },
+    "feature": {
+      "customTemplates": {
+        "component": "templates/components/features/TemplateName.tsx",
+        "test": "templates/components/features/TemplateName.test.tsx",
+        "style": "templates/components/features/_TemplateName.css"
+      },
+      "path": "src/components/features",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false
+    },
+    "page": {
+      "customTemplates": {
+        "component": "templates/components/pages/TemplateNamePage.tsx",
+        "test": "templates/components/pages/TemplateNamePage.test.tsx",
+        "style": "templates/components/pages/_TemplateNamePage.css"
+      },
+      "path": "src/components/pages",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false
+    }
+  },
+  "usesCssModule": true
+}

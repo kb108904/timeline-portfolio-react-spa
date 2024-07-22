@@ -1,0 +1,21 @@
+.custom-menu {
+    text-align: center;
+    width: 200px; /* Adjust the width as needed */
+    background-color: #f8f9fa; /* Background color */
+    padding: 10px; /* Padding inside the menu */
+    box-shadow: 2px 0 5px rgba(0, 0.1, 0, 0.1); /* Optional: Add shadow for better separation */
+  }
+  
+  .custom-menu a {
+    display: block;
+    padding: 5px 7px; /* Padding for each link */
+    color: #000; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    border-bottom: 1px solid #ddd; /* Optional: Add a bottom border to each link */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+  }
+  
+  .custom-menu a:hover {
+    background-color: #e2e6ea; /* Change background color on hover */
+  }
+  
