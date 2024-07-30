@@ -6,6 +6,7 @@ import Menu from './features/menu/menu';
 import { FilesProvider } from '../contexts/FilesContext';
 import ResumePage from './pages/resume/resumePage';
 import ProjectPage from './pages/project/projectPage';
+import CollapsibleContainer from './features/CollapsibleContainer/CollapsibleContainer';
 
 
 
@@ -14,17 +15,19 @@ function App() {
   return (
     <FilesProvider>
       <main className='d-flex flex-nowrap'>
-        <div className='d-flex flex-row flex-shrink-0 bg-body-tertiary'>
-          <div className='d-flex flex-column align-items-center'>
-            <Menu />
-            <Timeline />
-          </div>
+        <div className='d-flex flex-row  w-100'>
+          <CollapsibleContainer>
+            <div className='h-100 d-flex flex-column align-items-center'>
+              <Menu />
+              <Timeline />
+            </div>
+          </CollapsibleContainer>
           <div>
             <Routes>
               <Route index element={<Navigate to='/home' replace />} />
               <Route path='/home' element={<MainPage />} />
               <Route path='/resume' element={<ResumePage />} />
-              <Route path='/project' element={<ProjectPage />} />
+              <Route path='/project/:id' element={<ProjectPage />} />
             </Routes>
           </div>
         </div>

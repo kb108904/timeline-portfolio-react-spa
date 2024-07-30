@@ -17,16 +17,16 @@ export default function Timeline(): JSX.Element {
 
   return (
     <div className="timeline" data-testid="timeline">
-      <div className="timeline-line"></div>
-      <div className='text-center fs-3'>Projects</div>
-      <div className="timeline-items">
+
+
+      <div className="h-100 timeline-items">
+        <div className="timeline-line"></div>
+        <div className='text-center fs-3'>Projects</div>
         {items.map((item, index) => (
           <Link
             key={index}
-            to={`/project`}
-            className="timeline-item-link"
-            onClick={() => handleClick(item)}
-          >
+            to={`/project/${item.date}`}
+            className="timeline-item-link">
             <div key={index} className="timeline-item mt-1">
               <div className="item-content p-3 bg-light">
                 <p className="item-date mb-0 text-center">{item.date}</p>

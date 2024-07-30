@@ -10,11 +10,9 @@
 
 .timeline-line {
   position: absolute;
-  top: 0;
-  left: 25px;
-  width: 2px;
+  left: -30px;
   height: 100%;
-  background-color: #000;
+  border-left: 2px solid black;
 }
 
 .timeline-items {

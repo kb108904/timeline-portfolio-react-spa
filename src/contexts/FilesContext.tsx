@@ -8,6 +8,7 @@ interface FilesContextType {
   items: TimelineItem[];
   selectedItem: TimelineItem | null;
   setSelectedItem: React.Dispatch<React.SetStateAction<TimelineItem | null>>;
+  getItemByDate: (date: string | undefined) => TimelineItem | undefined
 }
 
 const FilesContext = createContext<FilesContextType | undefined>(undefined);
@@ -86,8 +87,15 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     });
   }, []);
 
+  function getItemByDate(date: string | undefined): TimelineItem | undefined {
+    let item = date? items.find((item) => item.date === date):undefined
+    if (!item)
+      return undefined
+    return item
+  }
+
   return (
-    <FilesContext.Provider value={{ items, selectedItem, setSelectedItem }}>
+    <FilesContext.Provider value={{ items, selectedItem, setSelectedItem, getItemByDate }}>
       {children}
     </FilesContext.Provider>
   );
