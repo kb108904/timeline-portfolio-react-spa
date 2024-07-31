@@ -23,7 +23,7 @@ export default function ProjectPage(): JSX.Element {
                     <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch">
                         <div className="card text-center mx-auto d-block w-100">
                             <div className="thumbnail-container">
-                                <img src={image.filePath} alt={image.fileName} className="thumbnail" />
+                                <img src={getThumbnailPath(image.filePath)} alt={image.fileName} className="thumbnail" />
                             </div>                            <div className="card-body">
                                 <h5 className="card-title">{getFileName(image.fileName)}</h5>
                             </div>
@@ -34,6 +34,14 @@ export default function ProjectPage(): JSX.Element {
         </main>
     );
 }
+
+function getThumbnailPath(filePath: string): string {
+    const path = new URL(filePath);
+    const segments = path.pathname.split('/');
+    segments.splice(-1, 0, 'thumbnails');
+    path.pathname = segments.join('/');
+    return path.toString();
+  }
 
 function getFileName(fullName: string): string {
     if (fullName.includes('.')) {
