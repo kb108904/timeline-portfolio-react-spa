@@ -13,22 +13,23 @@ export default function ProjectPage(): JSX.Element {
     }
 
     return (
-        <main>
-            <div className="container mt-4">
-                <div className='d-flex-col'>
-                    <h1 className="mb-4">{selectedItem.pageName}</h1>
-                    <p className="text-center col-6 offset-3">{selectedItem.description}</p>
-                </div>
-                <div className="row justify-content-center">
-                    {selectedItem.imageFiles.map((image, index) => (
-                        <div key={index} className="col-sm-12 col-md-6 col-lg-4 col-xxl-3 mb-4">
-                            <div className="text-center">
-                                <img src={image.filePath} alt={image.fileName} className=" thumbnail img-thumbnail" />
+        <main className="container mt-4">
+            <div className="text-center mb-4">
+                <h1>{selectedItem.pageName}</h1>
+                <p className="col-12 col-md-8 offset-md-2">{selectedItem.description}</p>
+            </div>
+            <div className="row justify-content-center">
+                {selectedItem.imageFiles.map((image, index) => (
+                    <div key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch">
+                        <div className="card text-center mx-auto d-block w-100">
+                            <div className="thumbnail-container">
+                                <img src={image.filePath} alt={image.fileName} className="thumbnail" />
+                            </div>                            <div className="card-body">
                                 <h5 className="card-title">{getFileName(image.fileName)}</h5>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </main>
     );

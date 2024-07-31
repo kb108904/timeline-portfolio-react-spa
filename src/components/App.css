@@ -4,7 +4,10 @@ main {
   max-height: 100vh;
   overflow-x: auto;
   overflow-y: hidden;
-  /* min-width: 1000px; */
+}
+
+main.container {
+  overflow-y: auto;
 }
 
 main h1 {
