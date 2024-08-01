@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom';
 import { useFiles } from '../../../contexts/FilesContext';
-import { TimelineItem } from '../../../models/timelineItems';
 import './_timeline.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Timeline(): JSX.Element {
-  const { items, setSelectedItem } = useFiles();
+  const { items } = useFiles();
 
   function getRandomImage(images: { fileName: string; filePath: string }[]): string {
+    if (!Array.isArray(images) || !images.length) {
+      return ''
+    }
     return images[Math.floor(Math.random() * images.length)].filePath;
   }
 
-  const handleClick = (item: TimelineItem) => {
-    setSelectedItem(item);
-  };
 
   return (
     <div className="timeline" data-testid="timeline">

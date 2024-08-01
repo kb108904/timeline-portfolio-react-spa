@@ -38,17 +38,18 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         data.Contents?.forEach(async (file) => {
           if (file.Key) {
             const parts = file.Key.split('/');
-            const date = parts[0];
-            const pageName = parts[1];
+            const pageName = parts[0];
+            const date = parts[1];
             const fileName = parts[2];
 
             const filePath = `https://${S3_BUCKET_NAME}.s3.${AWS_REGION}.amazonaws.com/${file.Key}`;
 
-            let item = parsedItems.find((item) => item.date === date && item.pageName === pageName);
+            let item : TimelineItem | undefined = parsedItems.find((item) => item.date === date && item.pageName === pageName);
             if (!item) {
               item = {
                 date,
                 imageFiles: [],
+                videoFiles: [],
                 description: 'Loading...',
                 pageName,
               };
@@ -57,6 +58,8 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
             if (fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') || fileName.endsWith('.png')) {
               item.imageFiles.push({ fileName, filePath });
+            } else if (fileName.endsWith('.mp4')) {
+              item.videoFiles.push({fileName, filePath});
             } else if (fileName.endsWith('.txt')) {
               item.description = file.Key;
             }
