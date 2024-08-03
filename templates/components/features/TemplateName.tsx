@@ -1,4 +1,4 @@
-import './_templateName.css'
+import './_TemplateName.css'
 
 interface TemplateNameProps {}
 

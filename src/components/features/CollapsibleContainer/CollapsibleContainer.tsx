@@ -1,5 +1,5 @@
 import './_CollapsibleContainer.css'
-import React, { useState, ReactNode, useEffect, useRef } from 'react';
+import { useState, ReactNode, useEffect, useRef } from 'react';
 
 interface CollapsibleContainerProps {
     children: ReactNode;

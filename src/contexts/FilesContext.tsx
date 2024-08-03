@@ -44,7 +44,7 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
             const filePath = `https://${S3_BUCKET_NAME}.s3.${AWS_REGION}.amazonaws.com/${file.Key}`;
 
-            let item : TimelineItem | undefined = parsedItems.find((item) => item.date === date && item.pageName === pageName);
+            let item: TimelineItem | undefined = parsedItems.find((item) => item.date === date && item.pageName === pageName);
             if (!item) {
               item = {
                 date,
@@ -57,16 +57,23 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
             }
 
             if (fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') || fileName.endsWith('.png')) {
-              item.imageFiles.push({ fileName, filePath });
+              if (fileName.startsWith('thumb.')) {
+                item.thumbnail = { fileName, filePath }
+              } else {
+                item.imageFiles.push({ fileName, filePath });
+              }
             } else if (fileName.endsWith('.mp4')) {
-              item.videoFiles.push({fileName, filePath});
+              item.videoFiles.push({ fileName, filePath });
             } else if (fileName.endsWith('.txt')) {
               item.description = file.Key;
             }
           }
         });
 
-        setItems(parsedItems);
+        // Sort the files by date
+        const sortedFiles = parsedItems.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+        setItems(sortedFiles);
 
         // Fetch text file contents asynchronously
         parsedItems.forEach((item) => {
@@ -91,7 +98,7 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   }, []);
 
   function getItemByDate(date: string | undefined): TimelineItem | undefined {
-    let item = date? items.find((item) => item.date === date):undefined
+    let item = date ? items.find((item) => item.date === date) : undefined
     if (!item)
       return undefined
     return item

@@ -4,6 +4,7 @@ import './_projectPage.css';
 import stringToPseudoUUID from '../../../utils/v3UUIDEncode';
 import { useState } from 'react';
 import getThumbnailPath from '../../../utils/getBucketThumbnail';
+import MarkdownView from '../../features/MarkdownView/MarkdownView';
 
 export default function ProjectPage(): JSX.Element {
     const { id } = useParams<{ id: string }>()
@@ -30,9 +31,9 @@ export default function ProjectPage(): JSX.Element {
 
     return (
         <main className="container mt-4">
-            <div className="vw-75 text-center mb-4">
+            <div className="vw-75 mb-4">
                 <h1>{selectedItem.pageName}</h1>
-                <p className="w-100 col-12 col-md-8">{selectedItem.description}</p>
+                <MarkdownView content={selectedItem.description} />
             </div>
 
             {/* Section for Videos */}

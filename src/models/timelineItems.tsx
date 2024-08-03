@@ -1,5 +1,6 @@
 export  interface TimelineItem {
     date: string;
+    thumbnail?: ImageFile;
     imageFiles: ImageFile[];
     videoFiles: VideoFile[];
     description: string;
