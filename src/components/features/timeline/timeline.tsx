@@ -3,9 +3,10 @@ import { useFiles } from '../../../contexts/FilesContext';
 import './_timeline.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import stringToPseudoUUID from '../../../utils/v3UUIDEncode';
+import { TimelineItem } from '../../../models/timelineItems';
 
 export default function Timeline(): JSX.Element {
-  const { items } = useFiles();
+  const { items, setSelectedItem, selectedItem } = useFiles();
 
   function getRandomImage(images: { fileName: string; filePath: string }[]): string {
     if (!Array.isArray(images) || !images.length) {
@@ -13,6 +14,10 @@ export default function Timeline(): JSX.Element {
     }
     return images[Math.floor(Math.random() * images.length)].filePath;
   }
+
+  const handleClick = (item: TimelineItem) => {
+    setSelectedItem(item);
+  };
 
   return (
     <div className="timeline" data-testid="timeline">
@@ -23,8 +28,9 @@ export default function Timeline(): JSX.Element {
           <Link
             key={stringToPseudoUUID(item.date)}
             to={`/project/${item.date}`}
-            className="timeline-item-link">
-            <div key={stringToPseudoUUID(item.date)} className="timeline-item mt-1">
+            className="timeline-item-link"
+            onClick={()=>handleClick(item)}>
+            <div key={stringToPseudoUUID(item.date)} className={`${selectedItem?.pageName===item.pageName?'marked':''} timeline-item mt-1`}>
               <div className="item-content p-3 bg-light">
                 <p className="item-date mb-0 text-center">{item.date}</p>
               </div>

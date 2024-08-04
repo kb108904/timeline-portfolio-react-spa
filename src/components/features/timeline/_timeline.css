@@ -42,6 +42,14 @@
   z-index: 1;
 }
 
+.marked::after {
+  content: '\2190';
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 200px;
+  z-index: 1;
+}
+
 .timeline-item:hover .item-hover {
   transform: scale(1.75);
   z-index: 2;
