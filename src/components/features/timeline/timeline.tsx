@@ -14,11 +14,8 @@ export default function Timeline(): JSX.Element {
     return images[Math.floor(Math.random() * images.length)].filePath;
   }
 
-
   return (
     <div className="timeline" data-testid="timeline">
-
-
       <div className="h-100 timeline-items">
         <div className="timeline-line"></div>
         <div className='fs-3'>Project Portfolio</div>

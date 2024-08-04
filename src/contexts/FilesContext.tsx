@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import { createContext, useState, useEffect, useContext, ReactNode } from 'react';
 import AWS from 'aws-sdk';
 import { AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_REGION, S3_BUCKET_NAME } from '../../config';
 import { TimelineItem } from '../models/timelineItems';
