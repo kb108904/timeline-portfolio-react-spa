@@ -26,11 +26,11 @@ export default function ProjectPage(): JSX.Element {
     };
 
     if (!selectedItem) {
-        return <div>No item selected</div>
+        return <div data-testid='projectPage'>No item selected</div>
     }
 
     return (
-        <main className="container mt-4">
+        <main className="container mt-4" data-testid='projectPage'>
             <div className="vw-75 mb-4">
                 <h1>{selectedItem.pageName}</h1>
                 <MarkdownView content={selectedItem.description} />

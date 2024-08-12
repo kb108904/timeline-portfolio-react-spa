@@ -1,17 +1,18 @@
-import React from 'react';
+import { expect, test } from 'vitest'
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import ResumePage from './ResumePage';
+import ResumePage from './resumePage';
 import { MemoryRouter } from 'react-router-dom';
 
 
+
 describe('<ResumePage />', () => {
+
     test('it should mount', () => {
 
         render(<ResumePage />, { wrapper: MemoryRouter });
 
         const resumePage = screen.getByTestId('resumePage');
 
-        expect(resumePage).toBeInTheDocument();
+        expect(resumePage).toBeTruthy();
     });
 });

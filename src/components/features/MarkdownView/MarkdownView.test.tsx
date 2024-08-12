@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import MarkdownView from './MarkdownView';
 import { MemoryRouter } from 'react-router-dom';
 
@@ -8,10 +8,11 @@ import { MemoryRouter } from 'react-router-dom';
 describe('<MarkdownView />', () => {
     test('it should mount', () => {
 
-        render(<MarkdownView />, { wrapper: MemoryRouter });
+        const text_input = "Test Input"
+        render(<MarkdownView content={text_input} />, { wrapper: MemoryRouter });
 
-        const markdownView = screen.getByTestId('markdownView');
+        const markdownView = screen.getByText(text_input);
 
-        expect(markdownView).toBeInTheDocument();
+        expect(markdownView).toBeTruthy();
     });
 });

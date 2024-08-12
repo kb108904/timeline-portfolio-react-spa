@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import MainPage from './MainPage';
+import '@testing-library/jest-dom';
+import MainPage from './mainPage';
 import { MemoryRouter } from 'react-router-dom';
 
 
@@ -12,6 +12,6 @@ describe('<MainPage />', () => {
 
         const mainPage = screen.getByTestId('mainPage');
 
-        expect(mainPage).toBeInTheDocument();
+        expect(mainPage).toBeTruthy();
     });
 });

@@ -1,17 +1,17 @@
-import React from 'react';
+
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import ProjectPage from './ProjectPage';
+import '@testing-library/jest-dom';
+import ProjectPage from './projectPage';
 import { MemoryRouter } from 'react-router-dom';
+import { FilesProvider } from '../../../contexts/FilesContext';
 
 
 describe('<ProjectPage />', () => {
     test('it should mount', () => {
 
-        render(<ProjectPage />, { wrapper: MemoryRouter });
+        render(<FilesProvider><ProjectPage /></FilesProvider>, { wrapper: MemoryRouter });
 
         const projectPage = screen.getByTestId('projectPage');
-
-        expect(projectPage).toBeInTheDocument();
+        expect(projectPage).toBeTruthy();
     });
 });

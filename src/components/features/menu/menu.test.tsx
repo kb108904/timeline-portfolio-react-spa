@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import Menu from './Menu';
+import '@testing-library/jest-dom';
+import Menu from './menu';
 import { MemoryRouter } from 'react-router-dom';
 
 
@@ -12,6 +12,6 @@ describe('<Menu />', () => {
 
         const menu = screen.getByTestId('menu');
 
-        expect(menu).toBeInTheDocument();
+        expect(menu).toBeTruthy();
     });
 });

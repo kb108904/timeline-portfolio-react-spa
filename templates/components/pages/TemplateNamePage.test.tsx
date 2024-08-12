@@ -1,7 +1,6 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import TemplateNamePage from './TemplateNamePage';
+import '@testing-library/jest-dom';
+import TemplateNamePage from './templateNamePage';
 import { MemoryRouter } from 'react-router-dom';
 
 

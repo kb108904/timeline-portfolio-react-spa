@@ -8,6 +8,6 @@ interface MarkdownViewProps {
 
 export default function MarkdownView({ content }: MarkdownViewProps): JSX.Element {
     return (
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+        <ReactMarkdown data-testid="markdownView" remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     )
 }
