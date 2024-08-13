@@ -19,7 +19,7 @@ export default function BucketReader():JSX.Element {
     s3.listObjectsV2(params, (err, data) => {
       if (err) {
         console.log('Error', err);
-      } else if(data && data.Contents) {
+      } else if(data.Contents) {
         const fileList = data.Contents.map((file) => file.Key);
         setFiles(fileList);
       }

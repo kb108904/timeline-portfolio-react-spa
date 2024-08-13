@@ -38,7 +38,7 @@ export default function ProjectPage(): JSX.Element {
 
             {/* Section for Videos */}
             <div className="row justify-content-center">
-                {selectedItem.videoFiles && selectedItem.videoFiles.map((video) => (
+                {selectedItem.videoFiles.map((video) => (
                     <div key={stringToPseudoUUID(video.fileName)} className={`${selectedItem.videoFiles.length>1?'col-6':'col-12'} mb-4 d-flex align-items-stretch`}>
                         <div className="card text-center mx-auto d-block w-100">
                             <div className="video-container">

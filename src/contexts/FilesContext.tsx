@@ -13,6 +13,7 @@ interface FilesContextType {
 
 const FilesContext = createContext<FilesContextType | undefined>(undefined);
 
+// eslint-disable-next-line react/prop-types
 export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [items, setItems] = useState<TimelineItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<TimelineItem | null>(null);
@@ -35,7 +36,7 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       } else {
         const parsedItems: TimelineItem[] = [];
 
-        data.Contents?.forEach(async (file) => {
+        data.Contents?.forEach((file) => {
           if (file.Key) {
             const parts = file.Key.split('/');
             const pageName = parts[0];
@@ -98,7 +99,7 @@ export const FilesProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   }, []);
 
   function getItemByDate(date: string | undefined): TimelineItem | undefined {
-    let item = date ? items.find((item) => item.date === date) : undefined
+    const item = date ? items.find((item) => item.date === date) : undefined
     if (!item)
       return undefined
     return item
