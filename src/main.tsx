@@ -13,7 +13,7 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-      {IS_UNDER_CONSTRUCTION ? (
+      {IS_UNDER_CONSTRUCTION==='true' ? (
         <UnderConstruction />
       ) : (
         <BrowserRouter>
