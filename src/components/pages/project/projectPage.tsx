@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
-import { useFiles } from '../../../contexts/FilesContext';
 import './_projectPage.css';
 import stringToPseudoUUID from '../../../utils/v3UUIDEncode';
 import { useState } from 'react';
 import getThumbnailPath from '../../../utils/getBucketThumbnail';
 import MarkdownView from '../../features/MarkdownView/MarkdownView';
+import { useFiles } from '../../../contexts/FIlesContext';
 
 export default function ProjectPage(): JSX.Element {
     const { id } = useParams<{ id: string }>()
@@ -18,12 +18,12 @@ export default function ProjectPage(): JSX.Element {
     function handleImageClick(filePath: string): void {
         setSelectedImage(filePath);
         setShowModal(true);
-    };
+    }
 
     function handleCloseModal(): void {
         setShowModal(false);
         setSelectedImage(undefined);
-    };
+    }
 
     if (!selectedItem) {
         return <div data-testid='projectPage'>No item selected</div>
@@ -91,7 +91,7 @@ export default function ProjectPage(): JSX.Element {
 }
 
 function getFileName(fullName: string | undefined): string {
-    let fileNameOutput:string = fullName || ''
+    let fileNameOutput:string = fullName ?? ''
 
     if (fileNameOutput.includes('.')) {
         const lastIndex = fileNameOutput.lastIndexOf('.')

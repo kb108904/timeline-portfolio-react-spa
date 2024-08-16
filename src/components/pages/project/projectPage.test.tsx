@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ProjectPage from './projectPage';
 import { MemoryRouter } from 'react-router-dom';
-import { FilesProvider } from '../../../contexts/FilesContext';
+import { FilesProvider } from '../../../contexts/FIlesContext';
 
 
 describe('<ProjectPage />', () => {

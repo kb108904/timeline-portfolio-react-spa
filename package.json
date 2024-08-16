@@ -9,11 +9,13 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest --exclude templates",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "dev-preview": "nodemon"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.632.0",
     "@popperjs/core": "^2.11.8",
-    "aws-sdk": "^2.1674.0",
+    "aws-sdk": "^2.1675.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "eslint-plugin-react": "^7.35.0",
@@ -44,6 +46,7 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "jest": "^29.7.0",
     "jsdom": "^24.1.1",
+    "nodemon": "^3.1.4",
     "ts-jest": "^29.2.4",
     "typescript": "^5.2.2",
     "vite": "^5.3.1",

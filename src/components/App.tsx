@@ -3,10 +3,10 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import MainPage from './pages/main/mainPage'
 import Timeline from './features/timeline/timeline'
 import Menu from './features/menu/menu';
-import { FilesProvider } from '../contexts/FilesContext';
 import ResumePage from './pages/resume/resumePage';
 import ProjectPage from './pages/project/projectPage';
 import CollapsibleContainer from './features/CollapsibleContainer/CollapsibleContainer';
+import { FilesProvider } from '../contexts/FIlesContext';
 
 
 

@@ -12,5 +12,4 @@ export default defineConfig({
     'process.env': process.env,
     'global':{}
   },
-  base: './',
 })
