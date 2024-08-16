@@ -4,7 +4,7 @@ import stringToPseudoUUID from '../../../utils/v3UUIDEncode';
 import { useState } from 'react';
 import getThumbnailPath from '../../../utils/getBucketThumbnail';
 import MarkdownView from '../../features/MarkdownView/MarkdownView';
-import { useFiles } from '../../../contexts/FIlesContext';
+import { useFiles } from '../../../contexts/FilesContext';
 
 export default function ProjectPage(): JSX.Element {
     const { id } = useParams<{ id: string }>()

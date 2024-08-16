@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Timeline from './timeline';
 import { MemoryRouter } from 'react-router-dom';
-import { FilesProvider } from '../../../contexts/FIlesContext';
+import { FilesProvider } from '../../../contexts/FilesContext';
 
 
 describe('<Timeline />', () => {

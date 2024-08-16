@@ -6,7 +6,7 @@ import Menu from './features/menu/menu';
 import ResumePage from './pages/resume/resumePage';
 import ProjectPage from './pages/project/projectPage';
 import CollapsibleContainer from './features/CollapsibleContainer/CollapsibleContainer';
-import { FilesProvider } from '../contexts/FIlesContext';
+import { FilesProvider } from '../contexts/FilesContext';
 
 
 

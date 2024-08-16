@@ -3,7 +3,8 @@ import './_timeline.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import stringToPseudoUUID from '../../../utils/v3UUIDEncode';
 import { TimelineItem } from '../../../models/timelineItems';
-import { useFiles } from '../../../contexts/FIlesContext';
+import { useFiles } from '../../../contexts/FilesContext';
+
 
 export default function Timeline(): JSX.Element {
   // const { items, setSelectedItem, selectedItem } = useFiles();
