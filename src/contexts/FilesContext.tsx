@@ -80,15 +80,15 @@ function parseS3Objects(data: ListObjectsV2CommandOutput): TimelineItem[] {
                 parsedItems.push(item)
             }
 
-            if (fileName.endsWith('.jpg') || fileName.endsWith('.jpeg') || fileName.endsWith('.png')) {
+            if (fileName.toLowerCase().endsWith('.jpg') || fileName.toLowerCase().endsWith('.jpeg') || fileName.toLowerCase().endsWith('.png')) {
                 if (fileName.startsWith('thumb.')) {
                     item.thumbnail = { fileName, filePath }
                 } else {
                     item.imageFiles.push({ fileName, filePath })
                 }
-            } else if (fileName.endsWith('.mp4')) {
+            } else if (fileName.toLowerCase().endsWith('.mp4')) {
                 item.videoFiles.push({ fileName, filePath })
-            } else if (fileName.endsWith('.txt')) {
+            } else if (fileName.toLowerCase().endsWith('.txt')) {
                 item.description = file.Key;
             }
         }
