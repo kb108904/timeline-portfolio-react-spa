@@ -17,6 +17,13 @@ export default function Timeline(): JSX.Element {
     return images[Math.floor(Math.random() * images.length)].filePath;
   }
 
+  function selectedClass(item: TimelineItem): string{
+    let classOutput = ''
+    classOutput+=selectedItem?.pageName === item.pageName ? 'marked ' : ''
+    classOutput+=selectedItem?.date === item.date ? 'selected ' : ''
+    return classOutput
+  }
+
   const handleClick = (item: TimelineItem) => {
     setSelectedItem(item);
   };
@@ -42,7 +49,7 @@ export default function Timeline(): JSX.Element {
               to={`/project/${item.date}`}
               className="timeline-item-link"
               onClick={() => { handleClick(item) }}>
-              <div key={stringToPseudoUUID(item.date)} className={`${selectedItem?.pageName === item.pageName ? 'marked' : ''} timeline-item mt-1`}>
+              <div key={stringToPseudoUUID(item.date)} className={`${selectedClass(item)} timeline-item mt-1`}>
                 <div className="item-content p-3 bg-light">
                   <p className="item-date mb-0 text-center">{item.date}</p>
                 </div>

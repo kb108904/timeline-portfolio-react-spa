@@ -43,9 +43,19 @@
 }
 
 .marked::after {
-  content: '\2190';
+  content: '|';
   position: absolute;
-  top: calc(50% - 5px);
+  font-size: 30px; 
+  top: calc(50% - 4px);
+  left: 200px;
+  z-index: 1;
+}
+
+.selected::after {
+  content: ']';
+  position: absolute;
+  font-size: 30px; 
+  top: calc(50% - 4px);
   left: 200px;
   z-index: 1;
 }
