@@ -88,7 +88,7 @@ function parseS3Objects(data: ListObjectsV2CommandOutput): TimelineItem[] {
                 }
             } else if (fileName.toLowerCase().endsWith('.mp4')) {
                 item.videoFiles.push({ fileName, filePath })
-            } else if (fileName.toLowerCase().endsWith('.txt')) {
+            } else if (fileName.toLowerCase().endsWith('.txt') || fileName.toLowerCase().endsWith('.md')) {
                 item.description = file.Key;
             }
         }
