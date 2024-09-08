@@ -19,7 +19,7 @@
       "customTemplates": {
         "component": "templates/components/features/TemplateName.tsx",
         "test": "templates/components/features/TemplateName.test.tsx",
-        "style": "templates/components/features/_TemplateName.css"
+        "style": "templates/components/features/_templateName.css"
       },
       "path": "src/components/features",
       "withStyle": true,

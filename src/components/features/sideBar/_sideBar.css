@@ -1,0 +1,52 @@
+/* Ensuring the sidebar container appearance */
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  /* Making each sidebar item a square container */
+  .sidebar-item {
+    background-color: #000;
+    border: 1px solid #535472;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden; /* Ensures the image stays within the square */
+  }
+  
+  /* Ensures the item is square */
+  .square-item {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%; /* Aspect ratio: 1:1 for square */
+    position: relative;
+  }
+  
+  /* Making the image fill the square container and fit properly */
+  .square-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%; /* Image takes the top 75% of the square */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  }
+  
+  /* Styling for the date below the image */
+  .item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%; /* Remaining 25% for the date */
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  

@@ -10,7 +10,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-width: 100%;
   object-fit: cover; /* Scale the image to cover the container */
   object-position: center; /* Center the image within the container */
 }
@@ -44,3 +45,39 @@
   display: block;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.container-scroll {
+  height: 100vh; /* Set a height to the container */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Hides horizontal scrolling */
+}
+
+@media (min-width: 1400px) {
+  .container{
+      min-width: 1380.63px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+      min-width: 1080.63px;
+  }
+}
+
+/* @media (min-width: 992px) {
+  .container{
+      min-width: 1080.63px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container{
+      min-width: 1080.63px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container{
+      min-width: 1080.63px;
+  }
+} */

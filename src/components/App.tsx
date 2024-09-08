@@ -1,12 +1,13 @@
 import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import MainPage from './pages/main/mainPage'
-import Timeline from './features/timeline/timeline'
+// import Timeline from './features/timeline/timeline'
 import Menu from './features/menu/menu';
 import ResumePage from './pages/resume/resumePage';
 import ProjectPage from './pages/project/projectPage';
 import CollapsibleContainer from './features/CollapsibleContainer/CollapsibleContainer';
 import { FilesProvider } from '../contexts/FilesContext';
+import SideBar from './features/sideBar/sideBar';
 
 
 
@@ -19,7 +20,7 @@ function App() {
           <CollapsibleContainer>
             <div className='h-100 d-flex flex-column align-items-center'>
               <Menu />
-              <Timeline />
+              <SideBar/>
             </div>
           </CollapsibleContainer>
           <div>

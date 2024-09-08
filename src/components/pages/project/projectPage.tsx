@@ -30,14 +30,14 @@ export default function ProjectPage(): JSX.Element {
     }
 
     return (
-        <main className="container mt-4" data-testid='projectPage'>
-            <div className="vw-75 mb-4">
+        <main className="container container-scroll mt-4" data-testid='projectPage'>
+            <div className="col-12 mx-auto">
                 <h1>{selectedItem.pageName}</h1>
                 <MarkdownView content={selectedItem.description} />
             </div>
 
             {/* Section for Videos */}
-            <div className="row justify-content-center">
+            <div className="row mb-4 justify-content-center">
                 {selectedItem.videoFiles.map((video) => (
                     <div key={stringToPseudoUUID(video.fileName)} className={`${selectedItem.videoFiles.length>1?'col-6':'col-12'} mb-4 d-flex align-items-stretch`}>
                         <div className="card text-center mx-auto d-block w-100">
@@ -56,10 +56,10 @@ export default function ProjectPage(): JSX.Element {
             </div>
 
             {/* Section for Images */}
-            <div className="row mb-4">
+            <div className="row mb-4">  
                 {selectedItem.imageFiles.map((image) => (
                     <div key={stringToPseudoUUID(image.fileName)} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch">
-                        <div className="card text-center mx-auto d-block w-100" onClick={() => handleImageClick(image.filePath)}>
+                        <div className="card text-center mx-auto d-block w-100" onClick={() => {handleImageClick(image.filePath)}}>
                             <div className="thumbnail-container">
                                 <img src={getThumbnailPath(image.filePath)} alt={image.fileName} className="thumbnail" />
                             </div>

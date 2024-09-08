@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import stringToPseudoUUID from '../../../utils/v3UUIDEncode';
 import { TimelineItem } from '../../../models/timelineItems';
 import { useFiles } from '../../../contexts/FilesContext';
+import getThumbnailPath from '../../../utils/getBucketThumbnail';
 
 
 export default function Timeline(): JSX.Element {
@@ -54,7 +55,9 @@ export default function Timeline(): JSX.Element {
                   <p className="item-date mb-0 text-center">{item.date}</p>
                 </div>
                 <div className="item-hover position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-dark bg-opacity-75">
-                  <img src={item.thumbnail ? item.thumbnail.filePath : getRandomImage(item.imageFiles)} alt={`${item.pageName} thumbnail`} className="img-fluid" />
+                  <img src={item.thumbnail ? item.thumbnail.filePath : getThumbnailPath(getRandomImage(item.imageFiles))} 
+                  alt={`${item.pageName} thumbnail`}
+                  className="img-fluid" />
                   <div className="item-name">
                     {item.pageName}
                   </div>
