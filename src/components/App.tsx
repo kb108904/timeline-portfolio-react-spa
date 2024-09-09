@@ -23,7 +23,7 @@ function App() {
               <SideBar/>
             </div>
           </CollapsibleContainer>
-          <div>
+          <div className='w-100'>
             <Routes>
               <Route index element={<Navigate to='/home' replace />} />
               <Route path='/home' element={<MainPage />} />

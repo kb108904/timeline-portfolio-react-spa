@@ -30,7 +30,7 @@ export default function ProjectPage(): JSX.Element {
     }
 
     return (
-        <main className="container container-scroll mt-4" data-testid='projectPage'>
+        <main className="container container-scroll" data-testid='projectPage'>
             <div className="col-12 mx-auto">
                 <h1>{selectedItem.pageName}</h1>
                 <MarkdownView content={selectedItem.description} />

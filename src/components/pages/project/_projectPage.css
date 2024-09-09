@@ -64,13 +64,13 @@
   }
 }
 
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
   .container{
-      min-width: 1080.63px;
+      min-width: 992px;
   }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container{
       min-width: 1080.63px;
   }
