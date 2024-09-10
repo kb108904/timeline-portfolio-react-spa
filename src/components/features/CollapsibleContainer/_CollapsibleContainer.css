@@ -1,28 +1,30 @@
 .content {
-    transition: max-width 0.3s ease-out, padding 0.3s ease-out;
+    transition: max-width 0.3s ease, padding 0.3s ease;
     max-width: 0;
-    /* Start collapsed */
     overflow: hidden;
 }
 
 .content.expanded {
     max-width: 300px;
-    /* Large enough to accommodate content */
 }
 
-/* Optional: Style for collapsing content */
 .content.collapsed {
     max-width: 0;
 }
 
 .toggle-button {
-    transition: left 0.3s ease-out;
-    left: 10px; /* Start collapsed */
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: left 0.2s ease-in;
+    
     overflow: hidden;
 }
 
 .toggle-button.expanded {
     left: 235px;
+    transition: left 0.2s ease;
 }
 
 .toggle-button.collapsed {
@@ -34,14 +36,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 50px;
-}
-
-.toggle-button {
-    position: absolute;
-    top: 15px;
-    cursor: pointer;
-    z-index: 1000; /* Ensure the button stays on top of other content */
+    margin-right: 45px;
 }
 
 /* @media (min-width: 769px) {

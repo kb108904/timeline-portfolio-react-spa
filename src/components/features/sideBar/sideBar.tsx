@@ -46,7 +46,7 @@ export default function SideBar(): JSX.Element {
     } else {
       return (
         <div className="sidebar" data-testid="sidebar">
-          <div className="fs-3 text-center">Project Portfolio</div>
+          <div className="fs-4 text-center">Project Portfolio</div>
           <div className="row">
             {items.map((item) => (
               <div key={stringToPseudoUUID(item.date)} className="col-md-6 mb-4">
@@ -59,7 +59,7 @@ export default function SideBar(): JSX.Element {
                 >
                   <div className={`${selectedClass(item)} sidebar-item square-item mt-1`}>
                     <img
-                      src={itemImages[stringToPseudoUUID(item.date)]}
+                      src={getThumbnailPath(itemImages[stringToPseudoUUID(item.date)])}
                       alt={`${item.pageName} thumbnail`}
                       className="img-fluid square-image"
                     />
