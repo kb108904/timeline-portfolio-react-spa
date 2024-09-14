@@ -1,0 +1,46 @@
+.container, .collapsible-wrapper, body, #root {
+    background-color: #EDF2F6;
+    color: #333333; 
+  }
+
+.container.bg {
+    background-color: #A3BACD;
+}
+  
+  h1, h2, h3 {
+    color: #312F32; 
+  }
+  
+  button, .btn {
+    background-color: #EDF2F6;
+    color: #312F32;
+  }
+  
+  button:hover, .btn:hover,button:focus, .btn:focus {
+    background-color: #EDF2F6;
+    color: #312F32;
+  }
+  
+  a {
+    color: #A3BACD; 
+  }
+  
+  .card{
+    background-color: #E8D7D7; 
+    border: 2px solid #EDF2F6; 
+  }
+  
+  .card-bg{
+    background-color: #A38B8B;
+  }
+  
+  .navbar, .menu-bg {
+    background-color: #A3BACD; 
+  }
+  
+  .menu-item {
+    background-color: #A38B8B;
+    border: 2px solid #535472;
+    color: #EDF2F6;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }

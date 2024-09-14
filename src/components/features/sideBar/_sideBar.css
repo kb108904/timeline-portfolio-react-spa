@@ -1,52 +1,53 @@
 /* Ensuring the sidebar container appearance */
 .sidebar {
-    background-color: #f0f0f0;
+    
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    min-width: 450px;
   }
   
-  /* Making each sidebar item a square container */
-  .sidebar-item {
-    background-color: #000;
-    border: 1px solid #535472;
-    border-radius: 6px;
-    position: relative;
-    overflow: hidden; /* Ensures the image stays within the square */
+  .sidebar-item-icon {
+    flex-shrink: 0;
+    overflow: hidden;
   }
   
-  /* Ensures the item is square */
-  .square-item {
+  .sidebar-item-icon img {
     width: 100%;
-    height: 0;
-    padding-bottom: 100%; /* Aspect ratio: 1:1 for square */
-    position: relative;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   
-  /* Making the image fill the square container and fit properly */
-  .square-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%; /* Image takes the top 75% of the square */
-    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  .sidebar-item-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
-  /* Styling for the date below the image */
-  .item-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25%; /* Remaining 25% for the date */
-    background-color: #f8f9fa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
+  /* Responsive image sizes */
+  @media (max-width: 576px) {
+    .sidebar-item-icon {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  @media (min-width: 577px) and (max-width: 992px) {
+    .sidebar-item-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    .sidebar-item-icon {
+      width: 40px;
+      height: 40px;
+    }
   }
 
-  
+  /* Active item styling */
+.list-group-item.active {
+  background-color: #007bff;
+  border-color: #007bff;
+}

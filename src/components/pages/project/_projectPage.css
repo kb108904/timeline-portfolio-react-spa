@@ -56,32 +56,8 @@
   min-width: 100%;
 }
 
-/* @media (min-width: 1400px) {
-  .container{
-      min-width: 1380.63px;
-  }
+.parent{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 4px solid #A3BACD;
 }
-
-@media (min-width: 1200px) {
-  .container{
-      min-width: 1080.63px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container{
-      min-width: 992px;
-  }
-} */
-
-/* @media (min-width: 768px) {
-  .container{
-      min-width: 1080.63px;
-  }
-}
-
-@media (min-width: 576px) {
-  .container{
-      min-width: 1080.63px;
-  }
-} */

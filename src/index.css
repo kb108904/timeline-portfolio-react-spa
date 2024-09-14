@@ -1,3 +1,6 @@
+@import url(styles/scrollbar.css);
+@import url(styles/color.css);
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

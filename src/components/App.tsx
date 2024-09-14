@@ -19,12 +19,13 @@ function App() {
         <div className='d-flex flex-row  w-100'>
           <CollapsibleContainer>
             <div className='h-100 d-flex flex-column align-items-center'>
-              <Menu />
+              
               <SideBar/>
             </div>
           </CollapsibleContainer>
 
-          <div className='w-100'>
+          <div className='w-100 cust-scrollbar-lg'>
+            <Menu />
             <Routes>
               <Route index element={<Navigate to='/home' replace />} />
               <Route path='/home' element={<MainPage />} />
