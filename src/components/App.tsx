@@ -16,16 +16,15 @@ function App() {
   return (
     <FilesProvider>
       <main className='d-flex flex-nowrap'>
-        <div className='d-flex flex-row  w-100'>
+        <div className='d-flex flex-row w-100'>
           <CollapsibleContainer>
             <div className='h-100 d-flex flex-column align-items-center'>
-              
-              <SideBar/>
+              <SideBar />
             </div>
           </CollapsibleContainer>
 
-          <div className='w-100 cust-scrollbar-lg'>
-            <Menu />
+          <div className='w-100 cust-scrollbar-lg d-flex flex-column'>
+            <Menu/>
             <Routes>
               <Route index element={<Navigate to='/home' replace />} />
               <Route path='/home' element={<MainPage />} />
