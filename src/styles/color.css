@@ -1,46 +1,77 @@
-.container, .collapsible-wrapper, body, #root {
-    background-color: #EDF2F6;
-    color: #333333; 
-  }
+:root {
+    --light-bg: #E6EDF6;
+    --secondary-light-bg: #9DE6F6;
+    --neutral-bg: #A9C4DD;
+    --dark-accent: #4CA4B8;
+    --darker-accent: #176273;
+    --darkest-accent: #004080;
+}
+
+.container,
+.collapsible-wrapper,
+body,
+#root {
+    background-color: var(--light-bg);
+    color: var(--darkest-accent);
+}
 
 .container.bg {
-    background-color: #A3BACD;
+    background-color: var(--neutral-bg);
 }
-  
-  h1, h2, h3 {
-    color: #312F32; 
-  }
-  
-  button, .btn {
-    background-color: #EDF2F6;
-    color: #312F32;
-  }
-  
-  button:hover, .btn:hover,button:focus, .btn:focus {
-    background-color: #EDF2F6;
-    color: #312F32;
-  }
-  
-  a {
-    color: #A3BACD; 
-  }
-  
-  .card{
-    background-color: #E8D7D7; 
-    border: 2px solid #EDF2F6; 
-  }
-  
-  .card-bg{
-    background-color: #A38B8B;
-  }
-  
-  .navbar, .menu-bg {
-    background-color: #A3BACD; 
-  }
-  
-  .menu-item {
-    background-color: #A38B8B;
-    border: 2px solid #535472;
-    color: #EDF2F6;
+
+h1, h2, h3 {
+    color: var(--darkest-accent);
+}
+
+button, .btn {
+    background-color: var(--light-bg);
+    color: var(--darkest-accent);
+}
+
+button:hover, .btn:hover,
+button:focus, .btn:focus {
+    background-color: var(--secondary-light-bg);
+    color: var(--dark-accent);
+}
+
+a {
+    color: var(--neutral-bg);
+}
+
+.card {
+    background-color: var(--neutral-bg);
+    border: 2px solid var(--light-bg);
+}
+
+.card-bg {
+    background-color: var(--dark-accent);
+}
+
+.navbar, .menu-bg {
+    background-color: var(--neutral-bg);
+}
+
+.menu-item {
+    background-color: var(--dark-accent);
+    border: 2px solid var(--darker-accent);
+    color: var(--light-bg);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
+}
+
+/* Styling for the list-group items */
+.sidebar .list-group-item {
+    background-color: var(--dark-accent);
+    color: black;
+    border: none;
+}
+
+.sidebar .list-group-item:hover,
+.sidebar .list-group-item:focus {
+    background-color: var(--neutral-bg);
+    color: var(--darker-accent);
+}
+
+.sidebar .list-group-item.active {
+    background-color: var(--light-bg);
+    color: var(--darkest-accent);
+}

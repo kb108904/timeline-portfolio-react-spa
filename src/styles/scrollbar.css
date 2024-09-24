@@ -1,6 +1,6 @@
 .cust-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #312F32 #E8D7D7;
+    scrollbar-color: var(--darkest-accent) var(--neutral-bg);
 }
 
 .cust-scrollbar::-webkit-scrollbar {
@@ -8,21 +8,20 @@
 }
 
 .cust-scrollbar::-webkit-scrollbar-track {
-    background-color: #E8D7D7;
+    background-color: var(--neutral-bg);
 }
 
 .cust-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #312F32;
+    background-color: var(--darkest-accent);
     border-radius: 10px;
 }
 
 .cust-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #312F32;
+    background-color: var(--darkest-accent);
 }
 
-
 .cust-scrollbar-lg {
-    scrollbar-color: #4F5A63 #A3BACD;
+    scrollbar-color: var(--darkest-accent) var(--neutral-bg);
 }
 
 .cust-scrollbar-lg::-webkit-scrollbar {
@@ -30,20 +29,20 @@
 }
 
 .cust-scrollbar-lg::-webkit-scrollbar-track {
-    background-color: #A3BACD;
+    background-color: var(--neutral-bg);
 }
 
 .cust-scrollbar-lg::-webkit-scrollbar-thumb {
-    background-color: #4F5A63;
+    background-color: var(--darkest-accent);
     border-radius: 10px;
 }
 
 .cust-scrollbar-lg::-webkit-scrollbar-thumb:hover {
-    background-color: #4F5A63;
+    background-color: var(--darkest-accent);
 }
 
 .menu-top-border {
     border-top-right-radius: 6px;
     border-top-left-radius: 0;
-    border-top: 8px solid #312F32;
+    border-top: 8px solid var(--darkest-accent);
 }

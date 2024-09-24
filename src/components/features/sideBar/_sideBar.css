@@ -43,9 +43,3 @@
       height: 60px;
     }
   }
-
-  /* Active item styling */
-.list-group-item.active {
-  background-color: #007bff;
-  border-color: #007bff;
-}
