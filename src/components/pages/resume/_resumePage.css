@@ -1,3 +1,92 @@
 .resumePage {
+    text-align: center;
+    overflow: auto;
+}
 
+.social-links a {
+    margin: 0 10px;
+}
+
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.icon-list li {
+    margin: 10px;
+}
+
+.icon-list img {
+    width: 32px;
+    height: 32px;
+}
+
+.list {
+    display: flex;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.list .item {
+    transition: .5s;
+}
+
+.list .item:has(img:hover) {
+    transform: translateZ(100px)
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 16px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+
+    /* Center the entire grid */
+    max-width: 700px; /* Adjust based on preference */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 100%; /* Position to the right of the icon */
+    transform: translate(10px, -50%); /* Adjusts distance and vertical centering */
+    background-color: rgba(0, 0, 0, 1); /* Semi-transparent black */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    font-size: 12px;
+    max-width: 800px; /* Set a maximum width */
+    white-space: normal; /* Allows text to wrap */
+    text-align: center; /* Center-align text */
+    width: 150px;
+    visibility: hidden;
+}
+
+.item img:hover + .caption:not(:hover) {
+    opacity: 1;
+    visibility: visible;
 }
