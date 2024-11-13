@@ -7,25 +7,27 @@ export default function ResumePage(): JSX.Element {
             {/* Social Media Links Section */}
             <section className='personal-section'>
                 <h2>Personal</h2>
+                <div className='d-flex m-3'></div>
                 <a href="https://www.linkedin.com/in/kevindbrown0010/">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn" height="300"
-                    style={{
-                        width: '300px', 
-                        height: '100px', 
-                        objectFit: 'cover',
-                        objectPosition: 'center'
-                      }}   />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn" height="500"
+                        style={{
+                            width: '500px',
+                            height: '100px',
+                            objectFit: 'cover',
+                            objectPosition: 'center'
+                        }} />
                 </a>
-                <div className='d-flex gap-3 justify-content-center align-items-center'>
-                <a href="https://github.com/kb108904">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="GitHub" height="100" />
-                </a>
-                <a href="https://bitbucket.org/kb108904/workspace/repositories/">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original-wordmark.svg" alt="Bitbucket" height="100" />
-                </a>
-                <a href="https://www.hackerrank.com/profile/kb108904">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank" height="100" />
-                </a>
+                <div />
+                <div className='d-flex m-3 gap-3 justify-content-center align-items-center'>
+                    <a href="https://github.com/kb108904">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="GitHub" height="100" />
+                    </a>
+                    <a href="https://bitbucket.org/kb108904/workspace/repositories/">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original-wordmark.svg" alt="Bitbucket" height="100" />
+                    </a>
+                    <a href="https://www.hackerrank.com/profile/kb108904">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank" height="100" />
+                    </a>
                 </div>
             </section>
             <hr />
@@ -170,7 +172,7 @@ export default function ResumePage(): JSX.Element {
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" alt="Matlab" />
                     <span className="caption">Matlab<br />3 Semesters<br />Multiple Projects<br />Learned during college and applied in several academic projects</span>
                 </div>
-                
+
             </div>
             <hr />
         </div>
