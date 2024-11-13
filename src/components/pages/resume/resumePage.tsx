@@ -6,7 +6,6 @@ export default function ResumePage(): JSX.Element {
 
             {/* Social Media Links Section */}
             <section className='personal-section'>
-                <h2>Personal</h2>
                 <div className='d-flex m-3'></div>
                 <a href="https://www.linkedin.com/in/kevindbrown0010/">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn" height="500"
