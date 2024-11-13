@@ -48,7 +48,8 @@
     padding: 20px;
 
     /* Center the entire grid */
-    max-width: 700px; /* Adjust based on preference */
+    max-width: 700px;
+    /* Adjust based on preference */
     margin: 0 auto;
     text-align: center;
 }
@@ -82,7 +83,7 @@
         transition: transform 0.5s ease;
         will-change: transform;
     }
-    
+
     .item img:hover {
         transform: scale(1.1);
     }
@@ -95,24 +96,141 @@
 
 .caption {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 100%; /* Position to the right of the icon */
-    transform: translate(10px, -50%); /* Adjusts distance and vertical centering */
-    background-color: rgba(0, 0, 0, 1); /* Semi-transparent black */
+    top: 50%;
+    /* Center vertically */
+    left: 100%;
+    /* Position to the right of the icon */
+    transform: translateY(-50%);
+    /* Adjusts distance and vertical centering */
+    background-color: rgba(0, 0, 0, 1);
+    /* Semi-transparent black */
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
     opacity: 0;
     transition: opacity 0.1s ease;
     font-size: 12px;
-    max-width: 800px; /* Set a maximum width */
-    white-space: normal; /* Allows text to wrap */
-    text-align: center; /* Center-align text */
+    max-width: 800px;
+    /* Set a maximum width */
+    white-space: normal;
+    /* Allows text to wrap */
+    text-align: center;
+    /* Center-align text */
     width: 150px;
     visibility: hidden;
 }
 
-.item img:hover + .caption:not(:hover) {
+@media (max-width: 544px) {
+
+    /* Adjust position based on the item’s column in a 3-column grid */
+    .list .item:nth-child(4n+1) .caption {
+        /* Leftmost column */
+        left: 100%;
+        /* Caption appears to the right of the icon */
+        transform: translate(10px, -50%);
+    }
+
+    .list .item:nth-child(4n+2) .caption,
+    .list .item:nth-child(4n+3) .caption {
+        /* Center column */
+        left: 50%;
+        /* Center the caption under the icon */
+        transform: translate(-50%, 50%);
+    }
+
+    .list .item:nth-child(4n) .caption {
+        /* Rightmost column */
+        right: -100%;
+        /* Caption appears to the left of the icon */
+        transform: translate(-150%, -50%);
+    }
+}
+
+@media (max-width: 684px) and (min-width: 545px) {
+
+    /* Adjust position based on the item’s column in a 3-column grid */
+    .list .item:nth-child(5n+1) .caption {
+        /* Leftmost column */
+        left: 100%;
+        /* Caption appears to the right of the icon */
+        transform: translate(10px, -50%);
+    }
+
+    .list .item:nth-child(5n+2) .caption,
+    .list .item:nth-child(5n+3) .caption,
+    .list .item:nth-child(5n+4) .caption {
+        /* Center column */
+        left: 50%;
+        /* Center the caption under the icon */
+        transform: translate(-50%, 50%);
+    }
+
+    .list .item:nth-child(5n) .caption {
+        /* Rightmost column */
+        right: -100%;
+        /* Caption appears to the left of the icon */
+        transform: translate(-150%, -50%);
+    }
+}
+
+@media (max-width: 769px) and (min-width: 685px) {
+
+    /* Adjust position based on the item’s column in a 3-column grid */
+    .list .item:nth-child(6n+1) .caption {
+        /* Leftmost column */
+        left: 100%;
+        /* Caption appears to the right of the icon */
+        transform: translate(10px, -50%);
+    }
+
+    .list .item:nth-child(6n+2) .caption,
+    .list .item:nth-child(6n+3) .caption,
+    .list .item:nth-child(6n+4) .caption,
+    .list .item:nth-child(6n+5) .caption {
+        /* Center column */
+        left: 50%;
+        /* Center the caption under the icon */
+        transform: translate(-50%, 50%);
+    }
+
+    .list .item:nth-child(6n) .caption {
+        /* Rightmost column */
+        right: -100%;
+        /* Caption appears to the left of the icon */
+        transform: translate(-150%, -50%);
+    }
+}
+
+@media (min-width: 770px) {
+
+    /* Adjust position based on the item’s column in a 3-column grid */
+    .list .item:nth-child(7n+1) .caption {
+        /* Leftmost column */
+        left: 100%;
+        /* Caption appears to the right of the icon */
+        transform: translate(10px, -50%);
+    }
+
+    .list .item:nth-child(7n+2) .caption,
+    .list .item:nth-child(7n+3) .caption,
+    .list .item:nth-child(7n+4) .caption,
+    .list .item:nth-child(7n+5) .caption,
+    .list .item:nth-child(7n+6) .caption {
+        /* Center column */
+        left: 50%;
+        /* Center the caption under the icon */
+        transform: translate(-50%, 50%);
+    }
+
+    .list .item:nth-child(7n) .caption {
+        /* Rightmost column */
+        right: -100%;
+        /* Caption appears to the left of the icon */
+        transform: translate(-150%, -50%);
+    }
+}
+
+.item img:hover+.caption:not(:hover) {
     opacity: 1;
     visibility: visible;
 }
