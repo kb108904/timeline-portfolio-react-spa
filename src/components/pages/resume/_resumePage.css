@@ -120,7 +120,14 @@
     visibility: hidden;
 }
 
-@media (max-width: 544px) {
+.list .item:nth-child(n) .caption{
+    /* Center column */
+    left: 50%;
+    /* Center the caption under the icon */
+    transform: translate(-50%, 50%);
+}
+
+@media (max-width: 589px) {
 
     /* Adjust position based on the item’s column in a 3-column grid */
     .list .item:nth-child(4n+1) .caption {
@@ -128,14 +135,6 @@
         left: 100%;
         /* Caption appears to the right of the icon */
         transform: translate(10px, -50%);
-    }
-
-    .list .item:nth-child(4n+2) .caption,
-    .list .item:nth-child(4n+3) .caption {
-        /* Center column */
-        left: 50%;
-        /* Center the caption under the icon */
-        transform: translate(-50%, 50%);
     }
 
     .list .item:nth-child(4n) .caption {
@@ -146,7 +145,7 @@
     }
 }
 
-@media (max-width: 684px) and (min-width: 545px) {
+@media (max-width: 684px) and (min-width: 590px) {
 
     /* Adjust position based on the item’s column in a 3-column grid */
     .list .item:nth-child(5n+1) .caption {
@@ -154,15 +153,6 @@
         left: 100%;
         /* Caption appears to the right of the icon */
         transform: translate(10px, -50%);
-    }
-
-    .list .item:nth-child(5n+2) .caption,
-    .list .item:nth-child(5n+3) .caption,
-    .list .item:nth-child(5n+4) .caption {
-        /* Center column */
-        left: 50%;
-        /* Center the caption under the icon */
-        transform: translate(-50%, 50%);
     }
 
     .list .item:nth-child(5n) .caption {
@@ -183,16 +173,6 @@
         transform: translate(10px, -50%);
     }
 
-    .list .item:nth-child(6n+2) .caption,
-    .list .item:nth-child(6n+3) .caption,
-    .list .item:nth-child(6n+4) .caption,
-    .list .item:nth-child(6n+5) .caption {
-        /* Center column */
-        left: 50%;
-        /* Center the caption under the icon */
-        transform: translate(-50%, 50%);
-    }
-
     .list .item:nth-child(6n) .caption {
         /* Rightmost column */
         right: -100%;
@@ -208,26 +188,39 @@
         /* Leftmost column */
         left: 100%;
         /* Caption appears to the right of the icon */
-        transform: translate(10px, -50%);
-    }
-
-    .list .item:nth-child(7n+2) .caption,
-    .list .item:nth-child(7n+3) .caption,
-    .list .item:nth-child(7n+4) .caption,
-    .list .item:nth-child(7n+5) .caption,
-    .list .item:nth-child(7n+6) .caption {
-        /* Center column */
-        left: 50%;
-        /* Center the caption under the icon */
-        transform: translate(-50%, 50%);
+        transform: translate(10%, 25%);
     }
 
     .list .item:nth-child(7n) .caption {
         /* Rightmost column */
         right: -100%;
         /* Caption appears to the left of the icon */
-        transform: translate(-150%, -50%);
+        transform: translate(-125%, 25%);
     }
+
+    .list .item:nth-last-child(-n+14) .caption {
+        /* Rightmost column */
+        right: -100%;
+        /* Caption appears to the left of the icon */
+        transform: translate(-50%, -130%);
+    }
+
+    .list .item:nth-last-child(1) .caption,
+    .list .item:nth-last-child(8) .caption {
+        /* Rightmost column */
+        right: -100%;
+        /* Caption appears to the left of the icon */
+        transform: translate(-100%, -130%);
+    }
+
+    .list .item:nth-last-child(7) .caption,
+    .list .item:nth-last-child(14) .caption {
+        /* Rightmost column */
+        right: -100%;
+        /* Caption appears to the left of the icon */
+        transform: translate(10%, -130%);
+    }
+
 }
 
 .item img:hover+.caption:not(:hover) {
