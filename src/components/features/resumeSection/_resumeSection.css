@@ -1,0 +1,39 @@
+.autoShow {
+    animation: autoShowAnimation both;
+    animation-timeline: view(80% 5%);
+}
+@keyframes autoShowAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.resume-section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.resume-section.left-aligned {
+    
+    text-align: left;
+}
+
+.resume-section.right-aligned {
+    
+    text-align: right;
+}
+
+.companyLogo {
+    max-width: 500px;
+    margin: 0 20px;
+    object-fit: contain;
+}
+
+.experience-content {
+    max-width: 600px;
+}

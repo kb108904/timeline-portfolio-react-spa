@@ -1,3 +1,4 @@
+import ResumeSection from '../../features/resumeSection/resumeSection';
 import './_resumePage.css';
 
 export default function ResumePage(): JSX.Element {
@@ -6,17 +7,17 @@ export default function ResumePage(): JSX.Element {
 
             {/* Social Media Links Section */}
             <section className='personal-section'>
-                <div className='d-flex m-3'></div>
-                <a href="https://www.linkedin.com/in/kevindbrown0010/">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn" height="500"
-                        style={{
-                            width: '500px',
-                            height: '100px',
-                            objectFit: 'cover',
-                            objectPosition: 'center'
-                        }} />
-                </a>
-                <div />
+                <div className='m-3'>
+                    <a href="https://www.linkedin.com/in/kevindbrown0010/">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn" height="500"
+                            style={{
+                                width: '500px',
+                                height: '100px',
+                                objectFit: 'cover',
+                                objectPosition: 'center'
+                            }} />
+                    </a>
+                </div>
                 <div className='d-flex m-3 gap-3 justify-content-center align-items-center'>
                     <a href="https://github.com/kb108904">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" alt="GitHub" height="100" />
@@ -41,7 +42,7 @@ export default function ResumePage(): JSX.Element {
                 </div>
                 <div className='item'>
                     <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg' alt="React" />
-                    <span className="caption">React<br />1 years of experience<br />1 Professional Project<br />1 personal projects<br />2 training courses<br />Micro Services, API</span>
+                    <span className="caption">React<br />1 years of experience<br />1 Professional Project<br />1 personal projects<br />2 training courses</span>
                 </div>
                 <div className='item'>
                     <img src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' alt="JavaScript" />
@@ -104,6 +105,10 @@ export default function ResumePage(): JSX.Element {
                     <span className="caption">Gitlab<br />4 years<br />1 Professional Project<br />Main GIT repository used in parallel with Garrit while with CAS</span>
                 </div>
                 <div className='item'>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original-wordmark.svg" />
+                    <span className="caption">Jira<br />4 Years<br />4 Projects<br />Primary tool used for tracking issues, managing tasks, and facilitating agile workflows across multiple teams.</span>
+                </div>
+                <div className='item'>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" />
                     <span className="caption">Jenkins<br />5+ years<br />1 Professional Project<br />Main CI/CD pipeline used while with CAS and Chase</span>
                 </div>
@@ -133,7 +138,11 @@ export default function ResumePage(): JSX.Element {
                 </div>
                 <div className='item'>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" />
-                    <span className="caption">VScode<br />1 year<br />Personal Use<br />Primary code editor used for personal projects and experimentation</span>
+                    <span className="caption">VScode<br />1 year<br />Personal Use<br />Primary IDE used for personal projects and experimentation</span>
+                </div>
+                <div className='item'>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" />
+                    <span className="caption">IntelliJ<br />5 year<br />3 Professional Project<br />Primary IDE used for professional projects the last 8 years</span>
                 </div>
                 <div className='item'>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original-wordmark.svg" />
@@ -169,11 +178,60 @@ export default function ResumePage(): JSX.Element {
                 </div>
                 <div className='item'>
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" alt="Matlab" />
-                    <span className="caption">Matlab<br />3 Semesters<br />Multiple Projects<br />Learned during college and applied in several academic projects</span>
+                    <span className="caption">MATLAB<br />3 Semesters<br />Multiple Projects<br />Developed skills in MATLAB for use in data modeling and academic research projects</span>
+                </div>
+                <div className='item'>
+                    <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-soldering-iron-engineering-flaticons-lineal-color-flat-icons.png" alt="external-soldering-iron-engineering-flaticons-lineal-color-flat-icons" />
+                    <span className="caption">Soldering<br />20 Years (Personal), 3 Years (Professional)<br />Experience spanning personal electronics projects and professional testing as a technician, with a focus on precision work for circuitry repair.</span>
+                </div>
+                <div className='item'>
+                    <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-3d-printing-geek-culture-flaticons-lineal-color-flat-icons-3.png" alt="external-3d-printing-geek-culture-flaticons-lineal-color-flat-icons-3" />
+                    <span className="caption">3D Printing<br />10 Years<br />Personal experience in building, running, modifying, and maintaining 3D printers, including custom setups and troubleshooting for personal projects.</span>
+                </div>
+                <div className='item'>
+                    <img width="100" height="100" src="https://img.icons8.com/plasticine/100/computer-support.png" alt="computer-support" />
+                    <span className="caption">Computer Repair & Support<br />20 Years<br />Extensive personal experience in diagnosing, repairing, and upgrading computers, including hardware, software, and network troubleshooting.</span>
                 </div>
 
             </div>
             <hr />
+
+            <ResumeSection
+                logoUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Logo_of_JPMorganChase_2024.svg/512px-Logo_of_JPMorganChase_2024.svg.png"
+                companyName="JPMorgan Chase & Co."
+                position="Software Engineer III"
+                dates="February 2018 - Present"
+                description="Responsible for developing, testing, and deploying scalable enterprise solutions in a fast-paced financial environment. Contributed to the creation of web applications and RESTful services using Java, Spring Boot, and Angular, enhancing the user experience for Chase customers. Collaborated across teams to implement CI/CD practices and utilized tools like Jenkins and Github for seamless deployment."
+                justification="right"
+            />
+
+            <ResumeSection
+                logoUrl="https://g2o.com/wp-content/uploads/2023/07/g2o-open-graph.png"
+                companyName="G2O, Columbus OH"
+                position="Software Developer"
+                dates="January 2013 – November 2023"
+                description="At G2O, I worked as a Software Developer across several major projects in healthcare, finance, and other business sectors. I led the development of REST APIs using Node.js and Express for the Cincinnati Children's Hospital Medical Center, implementing the HAPI FHIR standard for healthcare data sharing with authentication through Azure Active Directory. I also supported front-end development and implementation for the Chemical Abstracts Service, in addition to streamlining the onboarding process for new developers. Additionally, I contributed to various other projects, leveraging my adaptability, project management, and interpersonal skills to succeed. Throughout my time at G2O, I gained extensive experience in full-stack development, API integration, and team collaboration, helping clients build scalable and efficient systems."
+                justification="left"
+            />
+
+            <ResumeSection
+                logoUrl="https://cdn.prod.website-files.com/592475953be4b41fc86d3961/59248a575a5e053f301da9be_Logo%20and%20Name_Red_Small.png"
+                companyName="Knockout Concepts"
+                position="Freelance Android Developer"
+                dates="2015 – 2017"
+                description="Building on my experience as a junior contracting developer, I took the initiative to secure my own client for part-time contracted work. I managed the full lifecycle of the project, from initial planning and requirements gathering to final delivery, ensuring that all milestones were met within the set timeframe. By effectively balancing client expectations and project goals, I successfully executed the project, demonstrating my strong organizational and communication skills."
+                justification="right"
+            />
+
+            <ResumeSection
+                logoUrl="https://lsicorp.com/adl/wp-content/uploads/sites/6/2024/07/logo_adl.svg"
+                companyName="LSI ADL Technology"
+                position="Test Technician"
+                dates="2010 – 2013"
+                description="With LSI ADL Technology, I served as a Test Technician where I followed detailed instructions for setting up electronics test fixtures, investigated circuit board failures by inspecting surface mount electronics under a microscope and or x-ray, and conducted environmental and burn-in tests to determine product failure rates. With them I also certified in hand-soldering circuit boards and regularly used a soldering iron, hot air tools, solder pots, and reflow oven. My time at ADL allowed me to develop strong technical troubleshooting skills and gain hands-on experience with electronics in a critical testing environment."
+                justification="left"
+            />
+
         </div>
     );
 }

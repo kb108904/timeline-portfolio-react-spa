@@ -48,7 +48,7 @@
     padding: 20px;
 
     /* Center the entire grid */
-    max-width: 700px;
+    max-width: 1200px;
     /* Adjust based on preference */
     margin: 0 auto;
     text-align: center;
@@ -85,7 +85,12 @@
     }
 
     .item img:hover {
-        transform: scale(1.1);
+        transform: scale(1.3);
+        z-index: -1;
+    }
+
+    .caption {
+        z-index: 1;
     }
 
     .list .item:has(img:hover) {
@@ -97,13 +102,9 @@
 .caption {
     position: absolute;
     top: 50%;
-    /* Center vertically */
     left: 100%;
-    /* Position to the right of the icon */
     transform: translateY(-50%);
-    /* Adjusts distance and vertical centering */
     background-color: rgba(0, 0, 0, 1);
-    /* Semi-transparent black */
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -111,114 +112,120 @@
     transition: opacity 0.1s ease;
     font-size: 12px;
     max-width: 800px;
-    /* Set a maximum width */
     white-space: normal;
-    /* Allows text to wrap */
     text-align: center;
-    /* Center-align text */
     width: 150px;
     visibility: hidden;
 }
 
 .list .item:nth-child(n) .caption{
-    /* Center column */
-    left: 50%;
-    /* Center the caption under the icon */
-    transform: translate(-50%, 50%);
+    transform: translate(-75%, -125%);
 }
 
 @media (max-width: 589px) {
 
-    /* Adjust position based on the item’s column in a 3-column grid */
     .list .item:nth-child(4n+1) .caption {
-        /* Leftmost column */
-        left: 100%;
-        /* Caption appears to the right of the icon */
-        transform: translate(10px, -50%);
+        transform: translate(5%, -125%);
     }
 
     .list .item:nth-child(4n) .caption {
-        /* Rightmost column */
-        right: -100%;
-        /* Caption appears to the left of the icon */
-        transform: translate(-150%, -50%);
+        transform: translate(-150%, -125%);
     }
+
 }
 
 @media (max-width: 684px) and (min-width: 590px) {
 
-    /* Adjust position based on the item’s column in a 3-column grid */
     .list .item:nth-child(5n+1) .caption {
-        /* Leftmost column */
-        left: 100%;
-        /* Caption appears to the right of the icon */
-        transform: translate(10px, -50%);
+        transform: translate(5%, -125%);
     }
 
     .list .item:nth-child(5n) .caption {
-        /* Rightmost column */
-        right: -100%;
-        /* Caption appears to the left of the icon */
-        transform: translate(-150%, -50%);
+        transform: translate(-150%, -125%);
     }
+
 }
 
 @media (max-width: 769px) and (min-width: 685px) {
 
-    /* Adjust position based on the item’s column in a 3-column grid */
     .list .item:nth-child(6n+1) .caption {
-        /* Leftmost column */
-        left: 100%;
-        /* Caption appears to the right of the icon */
-        transform: translate(10px, -50%);
+        transform: translate(5%, -125%);
     }
 
     .list .item:nth-child(6n) .caption {
-        /* Rightmost column */
-        right: -100%;
-        /* Caption appears to the left of the icon */
-        transform: translate(-150%, -50%);
+        transform: translate(-150%, -125%);
     }
+
 }
 
-@media (min-width: 770px) {
+@media (max-width: 877px) and (min-width: 782px) {
 
-    /* Adjust position based on the item’s column in a 3-column grid */
     .list .item:nth-child(7n+1) .caption {
-        /* Leftmost column */
-        left: 100%;
-        /* Caption appears to the right of the icon */
-        transform: translate(10%, 25%);
+        transform: translate(5%, -125%);
     }
 
     .list .item:nth-child(7n) .caption {
-        /* Rightmost column */
-        right: -100%;
-        /* Caption appears to the left of the icon */
-        transform: translate(-125%, 25%);
+        transform: translate(-150%, -125%);
     }
 
-    .list .item:nth-last-child(-n+14) .caption {
-        /* Rightmost column */
-        right: -100%;
-        /* Caption appears to the left of the icon */
-        transform: translate(-50%, -130%);
+}
+
+@media (max-width: 973px) and (min-width: 878px) {
+
+    .list .item:nth-child(8n+1) .caption {
+        transform: translate(5%, -125%);
     }
 
-    .list .item:nth-last-child(1) .caption,
-    .list .item:nth-last-child(8) .caption {
-        /* Rightmost column */
-        right: -100%;
-        /* Caption appears to the left of the icon */
-        transform: translate(-100%, -130%);
+    .list .item:nth-child(8n) .caption {
+        transform: translate(-150%, -125%);
     }
 
-    .list .item:nth-last-child(7) .caption,
-    .list .item:nth-last-child(14) .caption {
-        /* Rightmost column */
-        right: -100%;
-        /* Caption appears to the left of the icon */
-        transform: translate(10%, -130%);
+}
+
+@media (max-width: 1069px) and (min-width: 974px) {
+
+    .list .item:nth-child(9n+1) .caption {
+        transform: translate(5%, -125%);
+    }
+
+    .list .item:nth-child(9n) .caption {
+        transform: translate(-150%, -125%);
+    }
+
+}
+
+@media (max-width: 1165px) and (min-width: 1070px) {
+
+    .list .item:nth-child(10n+1) .caption {
+        transform: translate(5%, -125%);
+    }
+
+    .list .item:nth-child(10n) .caption {
+        transform: translate(-150%, -125%);
+    }
+
+}
+
+@media (max-width: 1261px) and (min-width: 1166px) {
+
+    .list .item:nth-child(11n+1) .caption {
+        transform: translate(5%, -125%);
+    }
+
+    .list .item:nth-child(11n) .caption {
+        transform: translate(-150%, -125%);
+    }
+
+}
+
+@media (min-width: 1262px) {
+
+    .list .item:nth-child(12n+1) .caption {
+        transform: translate(5%, -125%);
+    }
+
+    .list .item:nth-child(12n) .caption {
+        transform: translate(-150%, -125%);
     }
 
 }
@@ -227,3 +234,53 @@
     opacity: 1;
     visibility: visible;
 }
+
+.resume-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border-bottom: 1px solid #ccc;
+    overflow: clip;
+  }
+  
+  .company-logo {
+    width: 120px;
+    height: auto;
+    margin-right: 20px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .resume-section:has(.company-logo:hover) .company-logo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .experience-content {
+    max-width: 600px;
+  }
+  
+  .company-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .position {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .experience-dates {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
+  }
+  
+  .experience-description {
+    font-size: 1em;
+    line-height: 1.6;
+  }
