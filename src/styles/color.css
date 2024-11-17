@@ -61,17 +61,24 @@ a {
 /* Styling for the list-group items */
 .sidebar .list-group-item {
     background-color: var(--dark-accent);
-    color: black;
     border: none;
+    border-bottom: 1px dotted var(--darker-accent);
+    color: black;
 }
 
 .sidebar .list-group-item:hover,
 .sidebar .list-group-item:focus {
     background-color: var(--neutral-bg);
     color: var(--darker-accent);
+    border-left: 3px solid var(--dark-accent);
+    border-right: 3px solid var(--dark-accent);
 }
 
 .sidebar .list-group-item.active {
     background-color: var(--light-bg);
     color: var(--darkest-accent);
 }
+
+.drop-shadow {
+    box-shadow: 1px 3px 0 1px rgba(0, 0, 0, 0.1);
+  }

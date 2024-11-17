@@ -43,7 +43,7 @@ export default function SideBar(): JSX.Element {
     return (
       <div className="sidebar menu-bg cust-scrollbar overflow-auto" data-testid="sidebar">
         <h4 className="text-center mb-4">Project Portfolio</h4>
-        <div className="list-group">
+        <div className="list-group drop-shadow">
           {items.map((item) => (
             <Link
               key={stringToPseudoUUID(item.date)}

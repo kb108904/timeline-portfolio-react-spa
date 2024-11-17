@@ -57,6 +57,7 @@ function useS3Data() {
     return { items, isLoading, error, setItems }
 }
 
+
 function parseS3Objects(data: ListObjectsV2CommandOutput): TimelineItem[] {
     const parsedItems: TimelineItem[] = []
     data.Contents?.forEach((file) => {
@@ -67,6 +68,8 @@ function parseS3Objects(data: ListObjectsV2CommandOutput): TimelineItem[] {
             const fileName = parts[2]
 
             const filePath = `https://${S3_BUCKET_NAME}.s3.${AWS_REGION}.amazonaws.com/${file.Key}`
+
+            if(!pageName || !date || !fileName) return
 
             let item: TimelineItem | undefined = parsedItems.find((item) => item.date === date && item.pageName === pageName)
             if (!item) {

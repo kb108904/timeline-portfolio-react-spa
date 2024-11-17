@@ -6,7 +6,7 @@ interface CollapsibleContainerProps {
     initialCollapsed?: boolean;
 }
 
-export default function CollapsibleContainer({ children, initialCollapsed = false }: CollapsibleContainerProps): JSX.Element {
+export default function CollapsibleContainer({ children, initialCollapsed = true }: CollapsibleContainerProps): JSX.Element {
 
     const [isCollapsed, setIsCollapsed] = useState(initialCollapsed);
     const contentRef = useRef<HTMLDivElement>(null);
@@ -15,18 +15,14 @@ export default function CollapsibleContainer({ children, initialCollapsed = fals
         const handleResize = () => {
             if (window.innerWidth <= 768) {
                 setIsCollapsed(true);
-            } else (
-                setIsCollapsed(false)
-            )
+            }
         };
 
         window.addEventListener('resize', handleResize)
 
         if (window.innerWidth <= 768) {
             setIsCollapsed(true);
-        } else (
-            setIsCollapsed(false)
-        )
+        }
 
         return () => {
             window.removeEventListener('resize', handleResize);

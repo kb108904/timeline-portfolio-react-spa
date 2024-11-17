@@ -64,15 +64,15 @@ export default function ProjectPage(): JSX.Element {
 
                 {/* Section for Images */}
                 {hasImages && (
-                    <div className="row mb-4">
+                    <div className="row">
                         {selectedItem.imageFiles.map((image) => (
-                            <div key={stringToPseudoUUID(image.fileName)} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-1 d-flex align-items-stretch">
+                            <div key={stringToPseudoUUID(image.fileName)} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex align-items-stretch">
                                 <div className="card text-center mx-auto d-block w-100" onClick={() => { handleImageClick(image.filePath) }}>
                                     <div className="thumbnail-container">
-                                        <img src={getThumbnailPath(image.filePath)} alt={image.fileName} className="thumbnail" />
+                                        <img src={getThumbnailPath(image.filePath)} alt={image.fileName} className="thumbnail card-img-top" />
                                     </div>
                                     <div className="card-body">
-                                        <h5 className="card-title">{getFileName(image.fileName)}</h5>
+                                        <p className="card-text">{getFileName(image.fileName)}</p>
                                     </div>
                                 </div>
                             </div>
