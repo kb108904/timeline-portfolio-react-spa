@@ -9,13 +9,7 @@ export default function ResumePage(): JSX.Element {
             <section className='personal-section'>
                 <div className='m-3'>
                     <a href="https://www.linkedin.com/in/kevindbrown0010/">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn" height="500"
-                            style={{
-                                width: '500px',
-                                height: '100px',
-                                objectFit: 'cover',
-                                objectPosition: 'center'
-                            }} />
+                        <img className='linkedinLogo' src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original-wordmark.svg" alt="LinkedIn" height="500"/>
                     </a>
                 </div>
                 <div className='d-flex m-3 gap-3 justify-content-center align-items-center'>
